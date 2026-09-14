@@ -1,0 +1,23 @@
+# ---- Heavy / generated runtime data (NEVER push) ----
+dblp_edge_reproduction/data/
+dblp_edge_reproduction/checkpoints/
+dblp_edge_reproduction/wandb/
+*.pt
+*.pkl
+
+# ---- Run logs ----
+*.log
+
+# ---- Internal planning / notes (not pushed) ----
+GNNDelete_DBLP_Edge_Deletion_PLAN.md
+dblp_edge_reproduction/MODERNIZATION.md
+
+# ---- Python caches / environments ----
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.venv/
+env/
+venv/
