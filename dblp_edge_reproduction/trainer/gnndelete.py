@@ -239,7 +239,12 @@ class GNNDeleteTrainer(Trainer):
                 num_nodes=data.num_nodes,
                 num_neg_samples=neg_size)
 
-            df_logits = model.decode(z, data.train_pos_edge_index[:, data.df_mask], neg_edge_index)
+            # paper-vs-repo fix: Randomness/DEC loss is computed on the predicted EDGE PROBABILITY
+            # (predicted probability of deleted edges should be random), matching the Neighborhood-
+            # Influence term below which also uses sigmoid probabilities. The released repo computed
+            # it on raw dot-product logits, which dwarfed the locality term (loss_r ~1.2 vs loss_l
+            # ~0.026) and over-distorted the S_Df embeddings, collapsing test utility (Et).
+            df_logits = model.decode(z, data.train_pos_edge_index[:, data.df_mask], neg_edge_index).sigmoid()
             loss_r = loss_fct(df_logits[:neg_size], df_logits[neg_size:])
             # df_logits = model.decode(
             #     z, 
