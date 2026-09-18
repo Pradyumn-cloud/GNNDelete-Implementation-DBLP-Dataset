@@ -4,9 +4,17 @@ dblp_edge_reproduction/checkpoints/
 dblp_edge_reproduction/wandb/
 *.pt
 *.pkl
+*.np[yz]
+*.h5
+*.bin
 
-# ---- Run logs ----
+# ---- Run logs / detach artifacts ----
 *.log
+*.err
+*.pid
+
+# ---- Diagnostic scratch scripts ----
+dblp_edge_reproduction/_diag_*.py
 
 # ---- Internal planning / notes (not pushed) ----
 GNNDelete_DBLP_Edge_Deletion_PLAN.md
