@@ -20,10 +20,6 @@ dblp_edge_reproduction/_diag_*.py
 GNNDelete_DBLP_Edge_Deletion_PLAN.md
 dblp_edge_reproduction/MODERNIZATION.md
 
-# ---- Documentation (README) ----
-README.md
-**/README.md
-
 # ---- Python caches / environments ----
 __pycache__/
 *.py[cod]
