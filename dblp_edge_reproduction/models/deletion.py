@@ -20,8 +20,13 @@ class DeletionLayer(nn.Module):
         super().__init__()
         self.dim = dim
         self.mask = mask
-        self.deletion_weight = nn.Parameter(torch.ones(dim, dim) / 1000)
-        # self.deletion_weight = nn.Parameter(torch.eye(dim, dim))
+        # paper-vs-repo fix (C-class): start DEL as the IDENTITY map.
+        # The released repo initialized deletion_weight to ones/1000, a rank-1
+        # projection that destroys the S_Df node embeddings at epoch 0 (test
+        # dt_auc drops to 0.70 BEFORE any training). The paper's DEL is a
+        # perturbation around the identity. See MODERNIZATION.md entry #12.
+        self.deletion_weight = nn.Parameter(torch.eye(dim, dim))
+        # self.deletion_weight = nn.Parameter(torch.ones(dim, dim) / 1000)
         # init.xavier_uniform_(self.deletion_weight)
     
     def forward(self, x, mask=None):
@@ -65,8 +70,14 @@ class GCNDelete(GCN):
         self.deletion1 = DeletionLayer(args.hidden_dim, mask_1hop)
         self.deletion2 = DeletionLayer(args.out_dim, mask_2hop)
 
-        self.conv1.requires_grad = False
-        self.conv2.requires_grad = False
+        # Freeze the GCN. (Compatibility: the official `self.convX.requires_grad
+        # = False` is a NO-OP in torch >= 2.8, so freeze at the parameter level.
+        # Same effect: the optimizer also only ever updates `deletion*`, so the
+        # GCN weights never change during unlearning.)
+        for p in self.conv1.parameters():
+            p.requires_grad_(False)
+        for p in self.conv2.parameters():
+            p.requires_grad_(False)
 
     def forward(self, x, edge_index, mask_1hop=None, mask_2hop=None, return_all_emb=False):
         # with torch.no_grad():
