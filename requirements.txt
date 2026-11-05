@@ -1,6 +1,0 @@
-numpy
-scipy
-scikit-learn
-tqdm
-torch>=2.0
-torch_geometric>=2.3
