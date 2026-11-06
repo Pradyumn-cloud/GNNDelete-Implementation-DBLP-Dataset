@@ -1,0 +1,91 @@
+{
+ "method": "gradient_ascent",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "scene",
+ "df_size": 10.0,
+ "alpha": null,
+ "n_deleted_edges": 595,
+ "n_train_edges": 114033,
+ "n_sdf_nodes_1hop": 204,
+ "n_sdf_nodes_2hop": 204,
+ "et_auroc": 0.8694767717340917,
+ "et_aupr": 0.8709482857947138,
+ "ed_auroc": 0.9566353788574253,
+ "ed_aupr": 0.9764207576409225,
+ "mean_prob_deleted_edges": 0.6042941808700562,
+ "per_relation_et": {
+  "attached to": {
+   "n": 658,
+   "auroc": 0.8179017193115363
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.6095041322314049
+  },
+  "close by": {
+   "n": 640,
+   "auroc": 0.94072509765625
+  },
+  "front": {
+   "n": 1130,
+   "auroc": 0.8984650325005874
+  },
+  "hanging on": {
+   "n": 126,
+   "auroc": 0.8056185437137818
+  },
+  "higher than": {
+   "n": 467,
+   "auroc": 0.9104585742517963
+  },
+  "left": {
+   "n": 2142,
+   "auroc": 0.9165882039090145
+  },
+  "lying on": {
+   "n": 173,
+   "auroc": 0.7272545023221626
+  },
+  "standing in": {
+   "n": 28,
+   "auroc": 0.6262755102040816
+  },
+  "standing on": {
+   "n": 660,
+   "auroc": 0.6927685950413224
+  },
+  "supported by": {
+   "n": 75,
+   "auroc": 0.6168888888888889
+  }
+ },
+ "trainable_params": 987328,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "gradient_ascent",
+  "df": "scene",
+  "df_size": 10.0,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 10,
+  "valid_freq": 1,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 1,
+ "train_time_sec": 2.922673463821411,
+ "mi_presence_before": 0.7891851635479035,
+ "mi_presence_after": 0.4473046201252006,
+ "mi_ratio": 1.7643125691995099
+}

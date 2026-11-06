@@ -1,0 +1,91 @@
+{
+ "method": "gradient_ascent",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "out",
+ "df_size": 0.5,
+ "alpha": null,
+ "n_deleted_edges": 570,
+ "n_train_edges": 114033,
+ "n_sdf_nodes_1hop": 5419,
+ "n_sdf_nodes_2hop": 8935,
+ "et_auroc": 0.780422369665565,
+ "et_aupr": 0.8071212835611284,
+ "ed_auroc": 0.5747789781471222,
+ "ed_aupr": 0.5343258316148823,
+ "mean_prob_deleted_edges": 0.7579825520515442,
+ "per_relation_et": {
+  "attached to": {
+   "n": 660,
+   "auroc": 0.7609182736455464
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.6446280991735538
+  },
+  "close by": {
+   "n": 650,
+   "auroc": 0.9044639053254439
+  },
+  "front": {
+   "n": 1143,
+   "auroc": 0.8525843718354104
+  },
+  "hanging on": {
+   "n": 127,
+   "auroc": 0.7451794903589807
+  },
+  "higher than": {
+   "n": 470,
+   "auroc": 0.8931552738795836
+  },
+  "left": {
+   "n": 2167,
+   "auroc": 0.8665032329341686
+  },
+  "lying on": {
+   "n": 174,
+   "auroc": 0.6059915444576562
+  },
+  "standing in": {
+   "n": 29,
+   "auroc": 0.6468489892984541
+  },
+  "standing on": {
+   "n": 666,
+   "auroc": 0.2523875226577929
+  },
+  "supported by": {
+   "n": 76,
+   "auroc": 0.5609418282548476
+  }
+ },
+ "trainable_params": 987328,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "gradient_ascent",
+  "df": "out",
+  "df_size": 0.5,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 10,
+  "valid_freq": 1,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 1,
+ "train_time_sec": 3.8801138401031494,
+ "mi_presence_before": 0.8141848092031493,
+ "mi_presence_after": 0.6542379051663941,
+ "mi_ratio": 1.2444781978752446
+}

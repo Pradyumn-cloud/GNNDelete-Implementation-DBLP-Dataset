@@ -1,0 +1,91 @@
+{
+ "method": "gnndelete",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "out",
+ "df_size": 5.0,
+ "alpha": 0.5,
+ "n_deleted_edges": 5702,
+ "n_train_edges": 114033,
+ "n_sdf_nodes_1hop": 17762,
+ "n_sdf_nodes_2hop": 21816,
+ "et_auroc": 0.8806778750518673,
+ "et_aupr": 0.8823621573711108,
+ "ed_auroc": 0.7497458964166855,
+ "ed_aupr": 0.7966642452758101,
+ "mean_prob_deleted_edges": 0.5394952297210693,
+ "per_relation_et": {
+  "attached to": {
+   "n": 660,
+   "auroc": 0.8237258953168044
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.6528925619834711
+  },
+  "close by": {
+   "n": 650,
+   "auroc": 0.9481443786982249
+  },
+  "front": {
+   "n": 1143,
+   "auroc": 0.9068742828843683
+  },
+  "hanging on": {
+   "n": 127,
+   "auroc": 0.7980035960071918
+  },
+  "higher than": {
+   "n": 470,
+   "auroc": 0.9189180624717066
+  },
+  "left": {
+   "n": 2167,
+   "auroc": 0.9257052285520377
+  },
+  "lying on": {
+   "n": 174,
+   "auroc": 0.7540956533227638
+  },
+  "standing in": {
+   "n": 29,
+   "auroc": 0.6159334126040428
+  },
+  "standing on": {
+   "n": 666,
+   "auroc": 0.7126676225775326
+  },
+  "supported by": {
+   "n": 76,
+   "auroc": 0.6293282548476453
+  }
+ },
+ "trainable_params": 20480,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "gnndelete",
+  "df": "out",
+  "df_size": 5.0,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 500,
+  "valid_freq": 25,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 500,
+ "train_time_sec": 112.4878339767456,
+ "mi_presence_before": 0.8234218019642556,
+ "mi_presence_after": 0.38450157668652984,
+ "mi_ratio": 2.141530365259234
+}

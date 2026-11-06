@@ -1,0 +1,91 @@
+{
+ "method": "gradient_ascent",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "in",
+ "df_size": 5.0,
+ "alpha": null,
+ "n_deleted_edges": 5702,
+ "n_train_edges": 114033,
+ "n_sdf_nodes_1hop": 7919,
+ "n_sdf_nodes_2hop": 8488,
+ "et_auroc": 0.7340896064879832,
+ "et_aupr": 0.7658246459950655,
+ "ed_auroc": 0.7132760302679525,
+ "ed_aupr": 0.72513321558442,
+ "mean_prob_deleted_edges": 0.6759549975395203,
+ "per_relation_et": {
+  "attached to": {
+   "n": 660,
+   "auroc": 0.7514692378328741
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.5867768595041323
+  },
+  "close by": {
+   "n": 650,
+   "auroc": 0.8471100591715977
+  },
+  "front": {
+   "n": 1143,
+   "auroc": 0.7886668365929324
+  },
+  "hanging on": {
+   "n": 127,
+   "auroc": 0.7361274722549446
+  },
+  "higher than": {
+   "n": 470,
+   "auroc": 0.8610276143051154
+  },
+  "left": {
+   "n": 2167,
+   "auroc": 0.8176143005083809
+  },
+  "lying on": {
+   "n": 174,
+   "auroc": 0.542442859030255
+  },
+  "standing in": {
+   "n": 29,
+   "auroc": 0.638525564803805
+  },
+  "standing on": {
+   "n": 666,
+   "auroc": 0.21816411005600195
+  },
+  "supported by": {
+   "n": 76,
+   "auroc": 0.5364439058171744
+  }
+ },
+ "trainable_params": 987328,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "gradient_ascent",
+  "df": "in",
+  "df_size": 5.0,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 10,
+  "valid_freq": 1,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 1,
+ "train_time_sec": 3.225172519683838,
+ "mi_presence_before": 0.7454823963353358,
+ "mi_presence_after": 0.5388754925533737,
+ "mi_ratio": 1.3834037855442058
+}

@@ -1,0 +1,71 @@
+{
+ "method": "original",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "et_auroc": 0.8810258314098018,
+ "et_aupr": 0.8825964932675796,
+ "per_relation": {
+  "attached to": {
+   "n": 660,
+   "auroc": 0.8230578512396695
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.6528925619834711
+  },
+  "close by": {
+   "n": 650,
+   "auroc": 0.9485017751479291
+  },
+  "front": {
+   "n": 1143,
+   "auroc": 0.9071689748317767
+  },
+  "hanging on": {
+   "n": 127,
+   "auroc": 0.7981275962551925
+  },
+  "higher than": {
+   "n": 470,
+   "auroc": 0.9192123132639203
+  },
+  "left": {
+   "n": 2167,
+   "auroc": 0.9257825302088699
+  },
+  "lying on": {
+   "n": 174,
+   "auroc": 0.7548883604174924
+  },
+  "standing in": {
+   "n": 29,
+   "auroc": 0.6159334126040428
+  },
+  "standing on": {
+   "n": 666,
+   "auroc": 0.7155646637628621
+  },
+  "supported by": {
+   "n": 76,
+   "auroc": 0.6265581717451523
+  }
+ },
+ "trainable_params": 987328,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 1000,
+  "valid_freq": 50
+ },
+ "best_epoch": 50,
+ "best_val_loss": 0.4781515896320343,
+ "train_time_sec": 880.6338317394257
+}

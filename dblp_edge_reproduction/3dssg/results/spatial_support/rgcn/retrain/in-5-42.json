@@ -1,0 +1,92 @@
+{
+ "method": "retrain",
+ "edge_set": "spatial_support",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "in",
+ "df_size": 5.0,
+ "alpha": null,
+ "n_deleted_edges": 5702,
+ "n_train_edges": 114033,
+ "n_sdf_nodes_1hop": 7919,
+ "n_sdf_nodes_2hop": 8488,
+ "et_auroc": 0.8505141023798355,
+ "et_aupr": 0.854528508478809,
+ "ed_auroc": 0.8080660074720102,
+ "ed_aupr": 0.8073239217945425,
+ "mean_prob_deleted_edges": 0.7220151424407959,
+ "per_relation_et": {
+  "attached to": {
+   "n": 660,
+   "auroc": 0.8164715335169881
+  },
+  "build in": {
+   "n": 22,
+   "auroc": 0.6074380165289255
+  },
+  "close by": {
+   "n": 650,
+   "auroc": 0.9203573964497043
+  },
+  "front": {
+   "n": 1143,
+   "auroc": 0.8661555100887979
+  },
+  "hanging on": {
+   "n": 127,
+   "auroc": 0.7933535867071735
+  },
+  "higher than": {
+   "n": 470,
+   "auroc": 0.9045812584880036
+  },
+  "left": {
+   "n": 2167,
+   "auroc": 0.8982761304621979
+  },
+  "lying on": {
+   "n": 174,
+   "auroc": 0.7170365966442066
+  },
+  "standing in": {
+   "n": 29,
+   "auroc": 0.6444708680142687
+  },
+  "standing on": {
+   "n": 666,
+   "auroc": 0.6690564438312185
+  },
+  "supported by": {
+   "n": 76,
+   "auroc": 0.6046572022160664
+  }
+ },
+ "trainable_params": 987328,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "spatial_support",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "retrain",
+  "df": "in",
+  "df_size": 5.0,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 1000,
+  "valid_freq": 50,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 50,
+ "best_val_loss": 0.5202310085296631,
+ "train_time_sec": 299.02738881111145,
+ "mi_presence_before": 0.7454823952985734,
+ "mi_presence_after": 0.5811304735941615,
+ "mi_ratio": 1.2828141513349527
+}
