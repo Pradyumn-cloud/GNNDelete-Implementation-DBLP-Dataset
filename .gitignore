@@ -2,6 +2,9 @@
 dblp_edge_reproduction/data/
 dblp_edge_reproduction/checkpoints/
 dblp_edge_reproduction/wandb/
+dblp_edge_reproduction/3dssg/raw/
+dblp_edge_reproduction/3dssg/data/
+dblp_edge_reproduction/3dssg/checkpoints/
 *.pt
 *.pkl
 *.np[yz]

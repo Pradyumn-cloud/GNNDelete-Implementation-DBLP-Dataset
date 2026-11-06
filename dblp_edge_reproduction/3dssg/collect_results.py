@@ -5,6 +5,7 @@
 import glob
 import json
 import os
+import sys
 from collections import defaultdict
 
 import numpy as np
@@ -20,6 +21,9 @@ def ms(v):
 
 
 def main():
+    # Windows consoles default to cp1252, which cannot print the lambda / arrows below.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     rows = [json.load(open(p)) for p in glob.glob(os.path.join(ROOT, 'results', '*', '*', '*', '*.json'))]
     out = ['# 3DSSG results (mean ± std over seeds)\n']
 
@@ -51,7 +55,7 @@ def main():
                    f'{ms([x.get("train_time_sec") for x in v]).replace(" ± ", "±")} | {int(np.mean([x["trainable_params"] for x in v])):,} |')
     text = '\n'.join(out) + '\n'
     print(text)
-    with open(os.path.join(ROOT, 'results_summary.md'), 'w') as f:
+    with open(os.path.join(ROOT, 'results_summary.md'), 'w', encoding='utf-8') as f:
         f.write(text)
 
 
