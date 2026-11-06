@@ -1,0 +1,143 @@
+{
+ "method": "gnndelete",
+ "edge_set": "all",
+ "gnn": "rgcn",
+ "seed": 42,
+ "df": "out",
+ "df_size": 2.5,
+ "alpha": 0.5,
+ "n_deleted_edges": 6520,
+ "n_train_edges": 260794,
+ "n_sdf_nodes_1hop": 20475,
+ "n_sdf_nodes_2hop": 23528,
+ "et_auroc": 0.9380310988196588,
+ "et_aupr": 0.9462977272058994,
+ "ed_auroc": 0.6796930384094246,
+ "ed_aupr": 0.7397298673958075,
+ "mean_prob_deleted_edges": 0.5623747706413269,
+ "per_relation_et": {
+  "attached to": {
+   "n": 715,
+   "auroc": 0.8051875397329943
+  },
+  "bigger than": {
+   "n": 226,
+   "auroc": 0.9821442556190775
+  },
+  "brighter than": {
+   "n": 446,
+   "auroc": 0.9573991031390136
+  },
+  "build in": {
+   "n": 21,
+   "auroc": 0.7755102040816326
+  },
+  "close by": {
+   "n": 639,
+   "auroc": 0.9146725248027898
+  },
+  "connected to": {
+   "n": 24,
+   "auroc": 0.6788194444444444
+  },
+  "front": {
+   "n": 1186,
+   "auroc": 0.9109495548117583
+  },
+  "hanging on": {
+   "n": 140,
+   "auroc": 0.41209183673469385
+  },
+  "higher than": {
+   "n": 468,
+   "auroc": 0.9756875958799035
+  },
+  "leaning against": {
+   "n": 22,
+   "auroc": 0.6260330578512396
+  },
+  "left": {
+   "n": 2289,
+   "auroc": 0.9113972441373934
+  },
+  "lying on": {
+   "n": 195,
+   "auroc": 0.8077054569362263
+  },
+  "more comfortable than": {
+   "n": 28,
+   "auroc": 0.9107142857142857
+  },
+  "same as": {
+   "n": 135,
+   "auroc": 0.9850754458161866
+  },
+  "same color": {
+   "n": 1815,
+   "auroc": 0.9717806160781368
+  },
+  "same material": {
+   "n": 510,
+   "auroc": 0.9726989619377162
+  },
+  "same object type": {
+   "n": 2413,
+   "auroc": 0.9762939692084369
+  },
+  "same shape": {
+   "n": 2317,
+   "auroc": 0.9856939261680521
+  },
+  "same state": {
+   "n": 116,
+   "auroc": 0.8883769322235433
+  },
+  "same symmetry as": {
+   "n": 20,
+   "auroc": 0.8975
+  },
+  "same texture": {
+   "n": 129,
+   "auroc": 0.9832942731806983
+  },
+  "standing in": {
+   "n": 24,
+   "auroc": 0.6875
+  },
+  "standing on": {
+   "n": 577,
+   "auroc": 0.7117463483205128
+  },
+  "supported by": {
+   "n": 73,
+   "auroc": 0.633327078251079
+  }
+ },
+ "trainable_params": 20480,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "all",
+  "gnn": "rgcn",
+  "seed": 42,
+  "unlearning_model": "gnndelete",
+  "df": "out",
+  "df_size": 2.5,
+  "alpha": 0.5,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 500,
+  "valid_freq": 25,
+  "ni_pairs": 200000,
+  "df_auc_repeats": 50,
+  "no_mi": false,
+  "save_ckpt": false
+ },
+ "best_epoch": 500,
+ "train_time_sec": 191.6962592601776,
+ "mi_presence_before": 0.6736185486452605,
+ "mi_presence_after": 0.332752025645059,
+ "mi_ratio": 2.024386019407131
+}

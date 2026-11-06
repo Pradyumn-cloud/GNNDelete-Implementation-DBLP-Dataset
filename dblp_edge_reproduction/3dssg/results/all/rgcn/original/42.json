@@ -1,0 +1,123 @@
+{
+ "method": "original",
+ "edge_set": "all",
+ "gnn": "rgcn",
+ "seed": 42,
+ "et_auroc": 0.9380769795574633,
+ "et_aupr": 0.9463102257503797,
+ "per_relation": {
+  "attached to": {
+   "n": 715,
+   "auroc": 0.8048471807912367
+  },
+  "bigger than": {
+   "n": 226,
+   "auroc": 0.9821442556190775
+  },
+  "brighter than": {
+   "n": 446,
+   "auroc": 0.9574895935972974
+  },
+  "build in": {
+   "n": 21,
+   "auroc": 0.7755102040816326
+  },
+  "close by": {
+   "n": 639,
+   "auroc": 0.914594155088766
+  },
+  "connected to": {
+   "n": 24,
+   "auroc": 0.6788194444444444
+  },
+  "front": {
+   "n": 1186,
+   "auroc": 0.9109161408108655
+  },
+  "hanging on": {
+   "n": 140,
+   "auroc": 0.41209183673469385
+  },
+  "higher than": {
+   "n": 468,
+   "auroc": 0.9757241215574549
+  },
+  "leaning against": {
+   "n": 22,
+   "auroc": 0.6260330578512396
+  },
+  "left": {
+   "n": 2289,
+   "auroc": 0.9113231915665574
+  },
+  "lying on": {
+   "n": 195,
+   "auroc": 0.8083892176199869
+  },
+  "more comfortable than": {
+   "n": 28,
+   "auroc": 0.9107142857142857
+  },
+  "same as": {
+   "n": 135,
+   "auroc": 0.9850754458161866
+  },
+  "same color": {
+   "n": 1815,
+   "auroc": 0.9718042938779227
+  },
+  "same material": {
+   "n": 510,
+   "auroc": 0.9727835447904651
+  },
+  "same object type": {
+   "n": 2413,
+   "auroc": 0.9762937974629411
+  },
+  "same shape": {
+   "n": 2317,
+   "auroc": 0.9857801701745128
+  },
+  "same state": {
+   "n": 116,
+   "auroc": 0.8883769322235433
+  },
+  "same symmetry as": {
+   "n": 20,
+   "auroc": 0.8975
+  },
+  "same texture": {
+   "n": 129,
+   "auroc": 0.9833543657232138
+  },
+  "standing in": {
+   "n": 24,
+   "auroc": 0.6875
+  },
+  "standing on": {
+   "n": 577,
+   "auroc": 0.7117463483205128
+  },
+  "supported by": {
+   "n": 73,
+   "auroc": 0.6314505535747795
+  }
+ },
+ "trainable_params": 1725568,
+ "args": {
+  "data_dir": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg\\data",
+  "root": "C:\\Users\\Admin\\Desktop\\Projects\\GNNDelete-Implementation-DBLP-Dataset\\dblp_edge_reproduction\\3dssg",
+  "edge_set": "all",
+  "gnn": "rgcn",
+  "seed": 42,
+  "hidden_dim": 128,
+  "out_dim": 64,
+  "num_bases": 0,
+  "lr": 0.001,
+  "epochs": 1000,
+  "valid_freq": 50
+ },
+ "best_epoch": 50,
+ "best_val_loss": 0.35517385601997375,
+ "train_time_sec": 547.2321965694427
+}
