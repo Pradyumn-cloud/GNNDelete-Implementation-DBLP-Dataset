@@ -28,4 +28,10 @@ Use `--gnn gcn` for the type-agnostic Stage A baseline. Results land in `results
 - R-GCN = Linear projection -> 2 RGCNConv layers, DistMult decoder, reverse edges get relation id r+R.
 - Deletion operator starts as identity (the fix from the DBLP work).
 - MI ratio is a simplified logistic-regression proxy, not the paper's MLP attacker.
-- Training code has not been run by the author yet: first run `--quick` and report any error.
+
+## Status
+
+The full pipeline has been run on Windows (RTX 4050 Laptop, CUDA 12.4, PyTorch
+2.6.0 + PyG 2.8.1). Smoke test, base models, and the E1–E5 grid all complete;
+results are in `results/` and `results_summary.md`. See the top-level `README.md`
+for the tables and interpretation.

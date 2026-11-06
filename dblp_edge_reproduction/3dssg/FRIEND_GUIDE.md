@@ -2,9 +2,9 @@
 
 You are going to train and test the 3DSSG part of our GNNDelete project. This file explains
 what is in this folder, how to run it, and what to send back.
-**Important:** the data preparation was tested, but the training scripts have NOT been run by
-the person who wrote them. So the first goal is the smoke test (Step 3). If anything crashes,
-copy the full error message and send it back. That is useful, not a failure.
+**Status update:** the full pipeline has now been run successfully (Windows, RTX 4050,
+PyTorch 2.6 + PyG 2.8). The smoke test, base models, and E1–E5 are complete; results are in
+`results/` and `results_summary.md`. This guide is kept as the original runbook.
 
 ---------------------------------------------------------------------------------------------
 
